@@ -2,7 +2,32 @@ import React from 'react';
 import { Toaster } from 'react-hot-toast';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-
+import NotFound from './components/NotFound';
+import About from './pages/About/About';
+import Login from './pages/Account/Login';
+import RequireAdmin from './pages/Account/RequireAdmin';
+import RequireAuth from './pages/Account/RequireAuth';
+import SignUp from './pages/Account/Signup';
+import Blog from './pages/Blog/Blog';
+import Contact from './pages/Contact/Contact';
+import Dashboard from './pages/Dashboard/Dashboard';
+import ManageOrders from './pages/Dashboard/Order/ManageOrders';
+import MyOrder from './pages/Dashboard/Order/MyOrder';
+import Payment from './pages/Dashboard/Order/Payment';
+import AddProduct from './pages/Dashboard/Product/AddProduct';
+import ManageProducts from './pages/Dashboard/Product/ManageProducts';
+import EditProfileInfo from './pages/Dashboard/Profile/EditProfileInfo';
+import MyProfile from './pages/Dashboard/Profile/MyProfile';
+import ManageReviews from './pages/Dashboard/Review/ManageReviews';
+import ReviewHere from './pages/Dashboard/Review/ReviewHere';
+import AllUsers from './pages/Dashboard/Users/AllUsers';
+import Analysis from './pages/Home/Features/Analysis';
+import Planning from './pages/Home/Features/Planning';
+import QuickResponse from './pages/Home/Features/QuickResponse';
+import Strategy from './pages/Home/Features/Strategy';
+import Home from './pages/Home/Home';
+import ToolDetail from './pages/Home/ToolDetail';
+import MyPortfolio from './pages/MyPortfolio/MyPortfolio';
 
 const App = () => {
     // const ref = useRef()
