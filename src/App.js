@@ -5,7 +5,11 @@ import Navbar from './components/Navbar';
 
 
 const App = () => {
-   
+    // const ref = useRef()
+    // const location = useLocation();
+    // useEffect(() => {
+    //     ref.current.scrollIntoView({ behavior: "smooth" });
+    // }, [location]);
 
     return (
         <Navbar>
@@ -29,7 +33,39 @@ const App = () => {
                     <Route path='/login' element={<Login />}></Route>
                     <Route path='/signup' element={<SignUp />}></Route>
 
-                    
+                    {/* dashboard start */}
+
+                    <Route path='/dashboard' element={<RequireAuth><Dashboard /></RequireAuth>}>
+                        <Route path='my-profile' element={<MyProfile />}></Route>
+                        <Route path='my-profile/:profileId' element={<EditProfileInfo />}></Route>
+                        <Route path='my-order' element={<MyOrder />}></Route>
+                        <Route path="payment/:orderId" element={<Payment />}></Route>
+                        <Route path='add-review' element={<ReviewHere />}></Route>
+
+                        {/* admin */}
+
+                        <Route path='users' element={<RequireAdmin>
+                            <AllUsers />
+                        </RequireAdmin>}></Route>
+                        <Route path='add-product' element={<RequireAdmin>
+                            <AddProduct />
+                        </RequireAdmin>}></Route>
+                        <Route path='manage-order' element={<RequireAdmin>
+                            <ManageOrders />
+                        </RequireAdmin>}></Route>
+                        <Route path='manage-product' element={<RequireAdmin>
+                            <ManageProducts />
+                        </RequireAdmin>}></Route>
+                        <Route path='manage-reviews' element={<RequireAdmin>
+                            <ManageReviews />
+                        </RequireAdmin>}></Route>
+
+                        {/* admin */}
+
+                    </Route>
+
+
+                    {/* dashboard end */}
 
 
                     <Route path='*' element={<NotFound />}></Route>
